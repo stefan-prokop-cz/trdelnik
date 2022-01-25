@@ -33,7 +33,10 @@ impl LocalnetHandle {
     #[throws]
     /// _Note_: Manual kill: `kill -9 $(lsof -t -i:8899)`
     pub async fn stop(mut self) {
-        self.solana_test_validator_process.kill().await?;
+        // @TODO Why does `await` wait indefinitely when `stop` is called by Jupyter Kernel?
+        // self.solana_test_validator_process.kill().await?;
+        self.solana_test_validator_process.start_kill()?;
+
         if Client::new(Keypair::new()).is_localnet_running(false).await {
             Err(Error::LocalnetIsStillRunning)?
         }
@@ -130,6 +133,7 @@ impl Commander {
 
         let rust_file_path = Path::new(self.root.as_ref()).join("program_client/src/lib.rs"); 
         fs::write(rust_file_path, &program_client).await?;
+        println!("program_client's lib.rs regenerated")
     }
 
     #[throws]
