@@ -1,0 +1,17 @@
+[package]
+name = "program_client"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+signer_authorization_insecure = { path = "../programs/0-signer-authorization/insecure", features = ["no-entrypoint"] }
+signer_authorization_secure = { path = "../programs/0-signer-authorization/secure", features = ["no-entrypoint"] }
+account_data_matching_insecure = { path = "../programs/1-account-data-matching/insecure", features = ["no-entrypoint"] }
+account_data_matching_secure = { path = "../programs/1-account-data-matching/secure", features = ["no-entrypoint"] }
+owner_checks_secure = { path = "../programs/2-owner-checks/secure", features = ["no-entrypoint"] }
+owner_checks_insecure = { path = "../programs/2-owner-checks/insecure", features = ["no-entrypoint"] }
+type_cosplay_insecure = { path = "../programs/3-type-cosplay/insecure", features = ["no-entrypoint"] }
+type_cosplay_secure = { path = "../programs/3-type-cosplay/secure", features = ["no-entrypoint"] }
+
+trdelnik = { path = "../../../crates/trdelnik" }
+

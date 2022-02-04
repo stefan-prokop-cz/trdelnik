@@ -5,6 +5,8 @@
         // examples are ignored because they have own workspaces
         "examples/state_machine/program_client/Cargo.toml",
         "examples/state_machine/Cargo.toml",
+        "examples/sealevel-attacks/program_client/Cargo.toml",
+        "examples/sealevel-attacks/Cargo.toml",
     ],
     "rust-analyzer.diagnostics.disabled": [
         "missing-unsafe",

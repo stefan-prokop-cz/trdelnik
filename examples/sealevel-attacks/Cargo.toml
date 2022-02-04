@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "programs/0-signer-authorization/*",
+    "programs/1-account-data-matching/*",
+    "programs/2-owner-checks/*",
+    "programs/3-type-cosplay/*",
+]

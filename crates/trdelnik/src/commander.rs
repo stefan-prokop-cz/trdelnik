@@ -49,7 +49,7 @@ pub struct Commander {
 impl Commander {
     pub fn new() -> Self {
         Self {
-            root: "../../".into()
+            root: "../../../".into()
         }
     }
 
@@ -87,9 +87,9 @@ impl Commander {
             .packages
             .into_iter()
             .filter_map(|package| {
-                match package.manifest_path.iter().nth_back(2) {
-                    Some("programs") => Some(package.name),
-                    _ => None,
+                match package.manifest_path.iter().any(|item| item == "programs") {
+                    true => Some(package.name),
+                    false => None,
                 }
             });
 

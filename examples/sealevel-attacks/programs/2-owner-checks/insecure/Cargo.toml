@@ -1,0 +1,26 @@
+[package]
+name = "owner_checks_insecure"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "owner_checks_insecure"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.18.0"
+trdelnik_program = { path = "../../../../../crates/trdelnik_program" }
+anchor-spl = "0.18.0"
+spl-token = "3.1.0"
+
+[dev-dependencies]
+fehler = "1.0.0"
+trdelnik = { path = "../../../../../crates/trdelnik" }
+program_client = { path = "../../../program_client" }
