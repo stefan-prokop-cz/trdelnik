@@ -3717,7 +3717,7 @@ dependencies = [
  "thiserror",
  "tokio",
  "toml",
- "trdelnik-test",
+ "trdelnik-test 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "vergen",
 ]
 
@@ -3756,6 +3756,18 @@ version = "0.1.0"
 dependencies = [
  "darling",
  "macrotest",
+ "proc-macro2 1.0.37",
+ "quote 1.0.18",
+ "syn 1.0.92",
+]
+
+[[package]]
+name = "trdelnik-test"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4620f8aaf2298000de2e180e3335c05f8bf67b715372b97871b99f3b3a42f089"
+dependencies = [
+ "darling",
  "proc-macro2 1.0.37",
  "quote 1.0.18",
  "syn 1.0.92",

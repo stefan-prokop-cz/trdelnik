@@ -3547,6 +3547,8 @@ dependencies = [
 [[package]]
 name = "trdelnik-test"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4620f8aaf2298000de2e180e3335c05f8bf67b715372b97871b99f3b3a42f089"
 dependencies = [
  "darling",
  "proc-macro2 1.0.38",
